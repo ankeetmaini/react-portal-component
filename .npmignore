@@ -3,3 +3,7 @@
 /server.js
 /webpack.*
 npm-debug.log
+/.editorconfig
+/.eslintrc.yml
+/index.tpl.html
+/src
