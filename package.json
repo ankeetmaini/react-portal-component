@@ -1,6 +1,6 @@
 {
   "name": "react-portal-component",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A portal component for React",
   "main": "lib/index.js",
   "scripts": {
