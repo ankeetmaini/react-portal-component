@@ -7,6 +7,6 @@ export default class Portal extends Component {
   }
 
   render () {
-    return <h1>I am a portal</h1>;
+    return <h1>I am a portal!</h1>;
   }
 }
