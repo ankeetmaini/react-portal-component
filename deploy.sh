@@ -5,14 +5,14 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
-if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
-    echo "Skipping deploy; just doing a build."
-    npm run lint
-    npm run build
-    npm run build-examples
-    echo "All good!"
-    exit 0
-fi
+# if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
+#     echo "Skipping deploy; just doing a build."
+#     npm run lint
+#     npm run build
+#     npm run build-examples
+#     echo "All good!"
+#     exit 0
+# fi
 
 # Save some useful information
 REPO=`git config remote.origin.url`
@@ -21,6 +21,7 @@ SHA=`git rev-parse --verify HEAD`
 
 # Clone the existing gh-pages for this repo into lib/
 # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
+ls
 git clone $REPO lib
 cd lib
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
