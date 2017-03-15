@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/** examples/** webpack.config.js server.js",
     "build": "./node_modules/.bin/webpack --bail",
-    "build-examples": "./node_modules/.bin/webpack --config ./webpack.examples.js --bail",
-    "publish": "npm run build && npm publish"
+    "build-examples": "./node_modules/.bin/webpack --config ./webpack.examples.js --bail"
   },
   "author": "Ankeet Maini <ankeet.maini@gmail.com>",
   "license": "MIT",
