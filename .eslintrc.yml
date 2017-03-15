@@ -3,9 +3,6 @@ extends: airbnb
 env:
   browser: true
 
-settings:
-  import/resolver: webpack
-
 rules:
   space-before-function-paren:
     - error
