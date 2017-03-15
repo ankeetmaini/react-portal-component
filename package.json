@@ -5,8 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/** webpack.config.js server.js",
-    "build-examples": "./node_modules/.bin/webpack --config ./webpack.examples.js",
-    "prepublish": "./node_modules/.bin/webpack"
+    "build": "./node_modules/.bin/webpack --bail",
+    "build-examples": "./node_modules/.bin/webpack --config ./webpack.examples.js --bail",
+    "prepublish": "npm run build"
   },
   "author": "Ankeet Maini <ankeet.maini@gmail.com>",
   "license": "MIT",
