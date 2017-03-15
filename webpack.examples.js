@@ -1,11 +1,13 @@
 const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const fs = require('fs');
 const path = require('path');
 const HtmlPlugin = require('./html-webpack-plugin');
-
+const exec = require('child_process').exec;
 
 const EXAMPLES = path.resolve(__dirname, 'examples');
+
+// clean the `lib` folder
+exec('rm -rf lib/*');
 
 function isDirectory(dir) {
   return fs.lstatSync(dir).isDirectory();
@@ -34,7 +36,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(['./lib']),
     new HtmlPlugin({ templatePath: './index.tpl.html' }),
   ],
 };
