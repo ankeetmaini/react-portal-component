@@ -1,8 +1,9 @@
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
 const path = require('path');
+const HtmlPlugin = require('./html-webpack-plugin');
+
 
 const EXAMPLES = path.resolve(__dirname, 'examples');
 
@@ -34,11 +35,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['./lib']),
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['manifest'],
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'index.tpl.html'),
-    }),
+    new HtmlPlugin({ templatePath: './index.tpl.html' }),
   ],
 };

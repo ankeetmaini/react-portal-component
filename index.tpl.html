@@ -4,7 +4,14 @@
     <title>react-portal-development</title>
   </head>
   <body>
-    <h1>Find all the examples on this page, scroll down!</h1>
-    <hr />
+    {{#if title}}
+      <h1>{{{title}}}</h1>
+    {{/if}}
+    {{#if examples}}
+      {{#each examples}}
+        <h2><a href="/{{heading}}">{{heading}}</a></h2>
+      {{/each}}
+    {{/if}}
+    {{{scripts}}}
   </body>
 </html>
