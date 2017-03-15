@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - stable
+
+script: bash ./deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "a028fe4d7cd5"
+  - COMMIT_AUTHOR_EMAIL: "ankeet.maini@gmail.com"

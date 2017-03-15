@@ -3,6 +3,11 @@ import { render } from 'react-dom';
 import Portal from './../../src/index';
 
 export default class SimpleDialog extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {};
+  }
+
   render () {
     return (
       <div>

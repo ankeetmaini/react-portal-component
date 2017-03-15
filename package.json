@@ -4,9 +4,10 @@
   "description": "A portal component for React",
   "main": "lib/index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/** webpack.config.js server.js",
-    "build-examples": "./node_modules/.bin/webpack --config ./webpack.examples.js",
-    "prepublish": "./node_modules/.bin/webpack"
+    "lint": "./node_modules/.bin/eslint src/** examples/** webpack.config.js server.js",
+    "build": "./node_modules/.bin/webpack --bail",
+    "build-examples": "./node_modules/.bin/webpack --config ./webpack.examples.js --bail",
+    "publish": "npm run build && npm publish"
   },
   "author": "Ankeet Maini <ankeet.maini@gmail.com>",
   "license": "MIT",
@@ -29,10 +30,13 @@
     "css-loader": "^0.26.2",
     "eslint": "^3.16.1",
     "eslint-config-airbnb": "^14.1.0",
+    "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
     "handlebars": "^4.0.6",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1"
   }
