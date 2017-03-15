@@ -8,7 +8,8 @@ fi
 # all good, update the aforementioned version
 npm version $1
 
-# push the tags to origin
+# push the commit and tag to origin
+git push origin master
 git push origin --tags
 
 # build only main index.js for npm
