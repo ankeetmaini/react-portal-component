@@ -9479,7 +9479,7 @@ var Portal = function (_Component) {
       return _react2.default.createElement(
         'h1',
         null,
-        'I am a portal'
+        'I am a portal!'
       );
     }
   }]);
