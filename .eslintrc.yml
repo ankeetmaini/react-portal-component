@@ -1,0 +1,16 @@
+extends: airbnb
+
+env:
+  browser: true
+
+settings:
+  import/resolver: webpack
+
+rules:
+  space-before-function-paren:
+    - error
+    - always
+  react/jsx-filename-extension: 0
+  import/extensions:
+    - 2
+    - js: never
